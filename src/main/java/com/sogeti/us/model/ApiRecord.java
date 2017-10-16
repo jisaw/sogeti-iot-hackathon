@@ -19,8 +19,6 @@ public class ApiRecord {
     private String imageLocation;
 
     //----
-
-
     public ApiRecord(ZonedDateTime recordedTimestamp, Long latitude, Long longitude, String obd2Data, String imageLocation) {
         this.recordedTimestamp = recordedTimestamp;
         this.latitude = latitude;
