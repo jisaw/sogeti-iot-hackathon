@@ -1,16 +1,34 @@
-package com.sogeti.us.controllers;
+package com.sogeti.us.model;
 
 import java.time.ZonedDateTime;
 
-public class CreateRequest {
-
+public class ScoredResult {
+    private int id;
     private ZonedDateTime recordedTimestamp;
     private Long latitude;
     private Long longitude;
     private String obd2Data;
     private String imageLocation;
+    private Integer score;
 
-    //----
+    public ScoredResult(ApiRecord apiRecord, Integer score) {
+        this.id = apiRecord.getId();
+        this.recordedTimestamp = apiRecord.getRecordedTimestamp();
+        this.latitude = apiRecord.getLatitude();
+        this.longitude = apiRecord.getLongitude();
+        this.obd2Data = apiRecord.getObd2Data();
+        this.imageLocation = apiRecord.getImageLocation();
+        this.score = score;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public ZonedDateTime getRecordedTimestamp() {
         return recordedTimestamp;
     }
@@ -49,5 +67,13 @@ public class CreateRequest {
 
     public void setImageLocation(String imageLocation) {
         this.imageLocation = imageLocation;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

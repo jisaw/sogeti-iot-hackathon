@@ -1,5 +1,6 @@
 package com.sogeti.us.controllers;
 
+import com.sogeti.us.model.ApiRecord;
 import com.sogeti.us.services.CreateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,8 +25,8 @@ public class CreateController {
 
     @RequestMapping(path = "/create", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.OK)
-    public void create(@RequestBody CreateRequest createRequest) {
-        createService.createRecord(createRequest);
+    public void create(@RequestBody ApiRecord apiRecord) {
+        createService.createRecord(apiRecord);
     }
 
 }
