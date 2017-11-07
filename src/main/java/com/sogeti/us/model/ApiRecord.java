@@ -5,19 +5,16 @@ import java.time.ZonedDateTime;
 public class ApiRecord {
 
     private int id;
-    private ZonedDateTime recordedTimestamp;
+    private String recordedTimestamp;
     private Long latitude;
     private Long longitude;
     private String obd2Data;
     private String imageLocation;
 
     //----
-    public ApiRecord(ZonedDateTime recordedTimestamp, Long latitude, Long longitude, String obd2Data, String imageLocation) {
-        this.recordedTimestamp = recordedTimestamp;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.obd2Data = obd2Data;
-        this.imageLocation = imageLocation;
+
+    public ApiRecord() {
+
     }
 
     public int getId() {
@@ -28,11 +25,11 @@ public class ApiRecord {
         this.id = id;
     }
 
-    public ZonedDateTime getRecordedTimestamp() {
+    public String getRecordedTimestamp() {
         return recordedTimestamp;
     }
 
-    public void setRecordedTimestamp(ZonedDateTime recordedTimestamp) {
+    public void setRecordedTimestamp(String recordedTimestamp) {
         this.recordedTimestamp = recordedTimestamp;
     }
 

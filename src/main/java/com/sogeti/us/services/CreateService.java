@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 
 @Component
 public class CreateService {
@@ -26,7 +27,7 @@ public class CreateService {
 
     public void createRecord(ApiRecord apiRecord) {
         String json = gson.toJson(apiRecord);
-        File file = new File(dataPath + apiRecord.getRecordedTimestamp().toString() + ".record.json");
+        File file = new File(dataPath + UUID.randomUUID().toString() + ".record.json");
         try (FileOutputStream output = new FileOutputStream(file)) {
             org.apache.commons.io.IOUtils.write(json, output, StandardCharsets.UTF_8);
         } catch (IOException ioe) {

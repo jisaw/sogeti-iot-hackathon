@@ -4,7 +4,7 @@ import java.time.ZonedDateTime;
 
 public class ScoredResult {
     private int id;
-    private ZonedDateTime recordedTimestamp;
+    private String recordedTimestamp;
     private Long latitude;
     private Long longitude;
     private String obd2Data;
@@ -29,11 +29,11 @@ public class ScoredResult {
         this.id = id;
     }
 
-    public ZonedDateTime getRecordedTimestamp() {
+    public String getRecordedTimestamp() {
         return recordedTimestamp;
     }
 
-    public void setRecordedTimestamp(ZonedDateTime recordedTimestamp) {
+    public void setRecordedTimestamp(String recordedTimestamp) {
         this.recordedTimestamp = recordedTimestamp;
     }
 
