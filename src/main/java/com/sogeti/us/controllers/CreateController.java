@@ -15,6 +15,13 @@ public class CreateController {
         this.createService = createService;
     }
 
+    @RequestMapping(path = "/helloWorld", method = RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.OK)
+    public String hello() {
+        return "HelloWorld";
+    }
+
+
     @RequestMapping(path = "/create", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.OK)
     public void create(@RequestBody CreateRequest createRequest) {

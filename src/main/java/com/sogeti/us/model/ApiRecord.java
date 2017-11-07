@@ -1,16 +1,9 @@
 package com.sogeti.us.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.time.ZonedDateTime;
 
-@Entity
 public class ApiRecord {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private ZonedDateTime recordedTimestamp;
     private Long latitude;
