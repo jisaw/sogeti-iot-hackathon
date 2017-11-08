@@ -1,7 +1,5 @@
 package com.sogeti.us.model;
 
-import java.time.ZonedDateTime;
-
 public class ApiRecord {
 
     private int id;
